@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head data-gwd-animation-mode="proMode">
+    <title>My UX Design Process</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="">
+    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <script src="owl-carousel/jquery-1.9.1.js"></script>
+    <script src="owl-carousel/owl.carousel.js"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="assets/favicon.png" >
+
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            background-color: transparent;
+        }
+
+        .bubble {
+            border-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            color: rgb(254, 253, 255);
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: bold;
+            background-color: rgb(208, 78, 91);
+            border: 4px solid rgb(242, 207, 211);
+            cursor: pointer;
+        }
+
+            .bubble:hover {
+                background-color: rgb(167, 50, 62);
+                border: 4px solid rgb(208, 78, 91);
+            }
+
+        .large {
+            width: 90px;
+            height: 90px;
+        }
+
+        .bubble span {
+            position: relative;
+            top: 38%;
+        }
+
+        .multiline span {
+            top: 25%;
+        }
+
+        #header {
+            text-align: center;
+            width: 100%;
+            min-height: 100px;
+            background: url(assets/header_bg.jpg) no-repeat;
+            margin-bottom: 15px;
+        }
+
+            #header span {
+                text-transform: uppercase;
+                font-size: 26px;
+                font-weight: bold;
+                padding: 4px 20px 4px 20px;
+                color: rgb(254, 253, 255);
+                border: 3px solid rgb(254, 253, 255);
+                position: relative;
+                top: 25px;
+            }
+
+        #flow {
+            width: 100%;
+            text-align: center;
+        }
+
+        #map {
+            height: 200px;
+            width: 568px;
+            margin: auto;
+            background: url(assets/flow_background.jpg) top center / auto 200px no-repeat;
+        }
+
+            #map .bubble {
+                position: relative;
+                display: block;
+                float: left;
+            }
+
+        #define {
+            left: 0;
+            top: 32px;
+        }
+
+        #research {
+            left: 25px;
+            top: 32px;
+        }
+
+        #ideate {
+            left: 54px;
+            top: 46px;
+        }
+
+        #prototype {
+            left: 66px;
+            top: 3px;
+        }
+
+        #test {
+            left: -13px;
+            top: 96px;
+        }
+
+        #build {
+            left: 40px;
+            top: 34px;
+        }
+
+        #pages {
+            width: 99%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+            #pages .item img {
+                display: block;
+                width: 99%;
+                height: auto;
+            }
+
+        .owl-pagination {
+            visibility: collapse;
+            display: none;
+        }
+
+        #pages .item {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+
+            #pages .item h1 {
+                font-family: "Open Sans", sans-serif;
+                font-size: 24px;
+                font-weight: bold;
+                color: rgb(208, 78, 91);
+                text-transform: uppercase;
+            }
+            #pages .item p {
+                font-size: 15px;
+                font-weight: normal;
+                margin: 15px;
+                margin-bottom: 30px;
+            }
+    </style>
+    <script type="text/javascript" gwd-events="handlers">
+
+        function showPage(page) {
+            var owl = $(".owl-carousel").data('owlCarousel');
+            switch (page) {
+                case '>':
+                    owl.next();
+                    break;
+                case '<':
+                    owl.prev();
+                    break;
+                default:
+                    owl.goTo(page);
+            }
+                
+        };
+    </script>
+</head>
+
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58633875-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+    <div id="header">
+        <span>My Design Process</span>
+    </div>
+    <div id="flow">
+        <div id="map">
+            <div id="define" class="large bubble" onclick="showPage(0)">
+                <span>Define</span>
+            </div>
+            <div id="research" class="large bubble multiline" onclick="showPage(1)">
+                <span>Research <br>&amp; <br>Analyse</span>
+            </div>
+            <div id="ideate" class="bubble" onclick="showPage(2)">
+                <span>Ideate</span>
+            </div>
+            <div id="prototype" class="bubble" onclick="showPage(3)">
+                <span>Prototype</span>
+            </div>
+            <div id="test" class="bubble" onclick="showPage(4)">
+                <span>Test</span>
+            </div>
+            <div id="build" class="large bubble multiline" onclick="showPage(5)">
+                <span>Build<br>&amp; <br>Deploy</span>
+            </div>
+        </div>
+    </div>
+    <div id="pages" class="owl-carousel owl-theme">
+        <div class="item">
+            <h1>DEFINE</h1>
+            <p>
+            I start off every project ensuring that the product is well defined, the project goals are clear and shared and that the requirements hide no ambiguity. I Joined a very small team at the University of Miskolc, to redesign the website of the Institute of Machine and Product Learning. During the first phase of the redesign I sat down with all necessary stakeholders to brainstorm and define a project kickoff plan that outline the goals of what the new site should achieve.
+            </p>
+            <img src="assets/step_1_define.png" alt="">
+        </div>
+        <div class="item">
+            <h1>RESEARCH &amp; ANALYSE</h1>
+            <p>
+            To understand the context and circumstances in which the product is used, I like to dive into some background research before starting to design. The main users of the Institution’s website are the students who come to the site looking for information and the faculty that uses the site as a means of communication towards the students. I’ve conducted in-depth interviews and used observation and card sorting techniques to understand task flows, user stories, characteristics and the overall feeling towards the product.
+            </p>
+            <img src="assets/step_2_research.png" alt="">
+        </div>
+        <div class="item">
+            <h1>IDEATE</h1>
+            <p>
+            Once all the data is transcribed and analysed, user journeys drafted and matrixes evaluated, it’s time to put ideas on paper. I like to brainstorm and arrange ideation sessions when working in a team and see brilliant thoughts build on each other. I also tend to iterate the sketches and wireframes early on whenever possible and work with low fidelity wireframes initially to quickly assess and test ideas with internal and external users.
+            </p> 
+            <img src="assets/step_3_ideate.png" alt="">
+        </div>
+        <div class="item">
+            <h1>PROTOTYPE</h1>
+            <p>
+            Depending on the deadline  and the stage of development, I build  rapid or working prototypes in various tools to test an idea’s feasibility and usability. For the institution’s website I’ve tested out concepts through low fidelity prototypes. These basic paper prototypes offered invaluable insights and highlighted pain points that may have very easily been overlooked.
+            </p>
+            <img src="assets/step_4_prototype.png" alt="">
+        </div>
+        <div class="item">
+            <h1>TEST</h1>
+            <p>
+            I love conducting user research and getting feedback from the people who are best equipped to answer the key research questions. For this project I’ve tested the site’s redesign idea through a series of usability and prototype tests with university students from different classes who use the site. In case the user test results indicate a change of approach, I go back to the drawing board and do another iteration.
+        </p>
+            <img src="assets/step_5_test.png" alt="">
+        </div>
+        <div class="item">
+            <h1>BUILD AND DEPLOY</h1>
+            <p>
+            Once the concept details are confirmed by research and testing, I work on a detailed Product Requirements and Functionality documentation to keep design, development and stakeholders aligned. I then work closely with design and development teams throughout the implementation.  After the website gets launched it’ll be time for learning, measuring and tweaking the product if necessary.
+            </p>
+            <img src="assets/step_6_build.png" alt="">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $("#pages").owlCarousel({
+
+                //navigation: true, // Show next and prev buttons
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true
+
+                // "singleItem:true" is a shortcut for:
+                // items : 1,
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+            });
+
+            //$(window).bind('mousewheel', function (event) {
+            //    if (event.originalEvent.wheelDelta >= 50) {
+            //        showPage('<');
+            //    }
+            //    else {
+            //        showPage('>');
+            //    }
+            //});
+        });
+    </script>
+</body>
+
+</html>
